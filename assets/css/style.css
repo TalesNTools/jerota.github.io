@@ -63,6 +63,12 @@ a {
 
 .description {
   max-width: 600px;
+  flex: 1 1 600px;
+}
+
+.stories {
+  max-width: 600px;
+  margin: 2rem auto;
 }
 
 .stories details {
@@ -70,6 +76,8 @@ a {
   border: 1px solid #FFD700;
   padding: 1rem;
   margin: 1rem 0;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .stories summary {
