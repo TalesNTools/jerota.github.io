@@ -1,28 +1,87 @@
-html {
-  scroll-behavior: smooth;
+body {
+  background-color: #000;
+  color: #FFD700;
+  font-family: 'Courier Prime', monospace;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: #FFD700;
 }
 
 #jerota-header {
+  background: #000;
   text-align: center;
-  background-color: #000;
-  color: #fff;
-  padding: 1rem;
-  font-size: 2rem;
-  font-family: 'Playfair Display', serif;
-  font-weight: bold;
+  padding: 1rem 0;
   border-bottom: 2px solid #cc3366;
+}
+
+#jerota-header .logo {
+  max-height: 80px;
+}
+
+#jerota-newsletter {
+  background: rgba(0, 0, 0, 0.8);
+  color: gold;
+  padding: 0.5rem;
+  text-align: center;
+  border-bottom: 1px solid #cc3366;
+}
+
+.newsletter-button {
+  margin-left: 1rem;
+  background: gold;
+  color: black;
+  padding: 0.4rem 0.8rem;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+.main-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin: 2rem 0 1rem;
+}
+
+.content {
+  padding: 1rem 2rem;
+}
+
+.collection {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.covers img {
+  max-height: 250px;
+  margin: 0.5rem;
+}
+
+.description {
+  max-width: 600px;
+}
+
+.stories details {
+  background: #111;
+  border: 1px solid #FFD700;
+  padding: 1rem;
+  margin: 1rem 0;
+}
+
+.stories summary {
+  font-weight: bold;
+  cursor: pointer;
 }
 
 #jerota-footer {
-  background-color: #000;
+  background: #000;
   color: #fff;
   text-align: center;
   padding: 2rem 1rem;
-  font-family: 'Playfair Display', serif;
-  font-size: 0.9rem;
   border-top: 2px solid #cc3366;
 }
 
@@ -31,183 +90,4 @@ html {
   text-decoration: none;
   font-weight: bold;
   margin: 0 0.5rem;
-}
-
-#jerota-footer a:hover {
-  text-decoration: underline;
-}
-
-#jerota-newsletter {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 999;
-  background-color: rgba(0, 0, 0, 0.6);
-  backdrop-filter: blur(5px);
-  color: gold;
-  font-family: 'Playfair Display', serif;
-  text-align: center;
-  padding: 0.4rem 1rem;
-  border-bottom: 1px solid #cc3366;
-  transition: transform 0.5s ease;
-}
-
-#jerota-newsletter.slide-up {
-  transform: translateY(-100%);
-}
-
-#jerota-newsletter span {
-  margin-right: 0.75rem;
-  font-size: 0.85rem;
-}
-
-.newsletter-button {
-  display: inline-block;
-  padding: 0.3rem 0.6rem;
-  background-color: gold;
-  color: #000;
-  border: none;
-  font-weight: bold;
-  text-decoration: none;
-  font-size: 0.85rem;
-  cursor: pointer;
-}
-
-.newsletter-button:hover {
-  background-color: #e6c200;
-}
-
-/* Vertical Nav */
-#jerota-nav {
-  position: fixed;
-  top: 50%;
-  right: 0;
-  transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.7);
-  border-left: 2px solid #cc3366;
-  border-radius: 8px 0 0 8px;
-  padding: 0.3rem;
-  font-family: 'Playfair Display', serif;
-  z-index: 998;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  width: auto;
-  max-width: fit-content;
-}
-
-#jerota-nav #nav-toggle {
-  background-color: gold;
-  color: black;
-  font-weight: bold;
-  border: none;
-  cursor: pointer;
-  padding: 0.4rem 0.6rem;
-  font-size: 1rem;
-  border-radius: 4px;
-}
-
-#jerota-nav #nav-links {
-  display: none;
-  flex-direction: column;
-  gap: 0.6rem;
-  margin-top: 0.6rem;
-  background-color: rgba(0, 0, 0, 0.9);
-  padding: 0.6rem 1.2rem;
-  border-radius: 8px 0 0 8px;
-  text-align: right;
-}
-
-#jerota-nav.open #nav-links {
-  display: flex;
-}
-
-#jerota-nav a {
-  color: gold;
-  text-decoration: none;
-  font-size: 0.9rem;
-  line-height: 1.4;
-}
-
-#jerota-nav a:hover {
-  text-decoration: underline;
-}
-
-/* Medium screens */
-@media (min-width: 768px) {
-  #jerota-nav #nav-toggle {
-    font-size: 1.1rem;
-    padding: 0.5rem 0.8rem;
-  }
-
-  #jerota-nav #nav-links {
-    padding: 0.75rem 1.4rem;
-    gap: 0.75rem;
-  }
-
-  #jerota-nav a {
-    font-size: 1rem;
-  }
-}
-
-/* Large screens */
-@media (min-width: 1200px) {
-  #jerota-nav #nav-toggle {
-    font-size: 1.2rem;
-    padding: 0.6rem 1rem;
-  }
-
-  #jerota-nav #nav-links {
-    padding: 1rem 1.6rem;
-    gap: 0.85rem;
-  }
-
-  #jerota-nav a {
-    font-size: 1.1rem;
-  }
-}
-
-details {
-  background: #111;
-  border-left: 4px solid #FFD700;
-  padding: 1rem;
-  margin-bottom: 1rem;
-  transition: all 0.3s ease;
-}
-
-details[open] {
-  background: #1a1a1a;
-}
-
-summary {
-  list-style: none;
-  color: #FFD700;
-}
-
-summary::-webkit-details-marker {
-  display: none;
-}
-
-summary::after {
-  content: '+';
-  float: right;
-}
-
-details[open] summary::after {
-  content: '−';
-}
-
-/* Mobile */
-@media (max-width: 600px) {
-  #jerota-nav {
-    top: auto;
-    bottom: 1rem;
-    right: 1rem;
-    transform: none;
-  }
-
-  #jerota-nav #nav-links {
-    text-align: right;
-  }
 }
