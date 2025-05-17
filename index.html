@@ -2,10 +2,101 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Jerota</title>
+  <title>Jerota – Lust and Literature</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="https://images.squarespace-cdn.com/content/650f8a488e019463b657b726/adc91a27-03ed-4d53-bea7-b04d2d33557b/original.png?content-type=image%2Fpng" />
+  <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
-  <h1>Welcome to Jerota.com</h1>
-  <p><a href="/erotica/">Enter the Erotica Section</a></p>
+  <script>
+    const faviconURL = "https://images.squarespace-cdn.com/content/650f8a488e019463b657b726/adc91a27-03ed-4d53-bea7-b04d2d33557b/original.png?content-type=image%2Fpng";
+
+    const earlyIcons = document.querySelectorAll("link[rel*='icon']");
+    earlyIcons.forEach(icon => icon.parentNode.removeChild(icon));
+
+    const icon1 = document.createElement("link");
+    icon1.rel = "icon";
+    icon1.type = "image/png";
+    icon1.href = faviconURL;
+    document.head.appendChild(icon1);
+
+    const icon2 = document.createElement("link");
+    icon2.rel = "shortcut icon";
+    icon2.href = faviconURL;
+    document.head.appendChild(icon2);
+
+    window.addEventListener("load", function () {
+      document.title = "Jerota – Lust and Literature";
+
+      // Newsletter bar
+      const newsletterBar = document.createElement("div");
+      newsletterBar.id = "jerota-newsletter";
+      newsletterBar.innerHTML = `
+        <div>
+          <span>📬 Get exclusive scenes and sneak peeks—Join the newsletter</span>
+          <a href="http://eepurl.com/jaaJ4M" target="_blank" class="newsletter-button">Subscribe</a>
+        </div>
+      `;
+      document.body.insertBefore(newsletterBar, document.body.firstChild);
+
+      setTimeout(() => {
+        newsletterBar.classList.add("slide-up");
+      }, 7000);
+
+      document.addEventListener("mousemove", (e) => {
+        if (e.clientY < 50) {
+          newsletterBar.classList.remove("slide-up");
+        }
+      });
+
+      // Header
+      const jerotaHeader = document.createElement("div");
+      jerotaHeader.id = "jerota-header";
+      jerotaHeader.innerHTML = `
+        <div style="display: flex; flex-direction: column; align-items: center; padding: 20px;">
+          <div style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+            <img src="${faviconURL}" alt="Jerota Logo" style="max-height: 100px;">
+            <div>
+              <a href="https://jerota.com" style="color: inherit; text-decoration: none; font-size: 2rem;">Jerota.com</a>
+              <div>
+                <span style="font-size: 1rem; font-weight: 300;">Lust and Literature</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      `;
+      document.body.insertBefore(jerotaHeader, document.body.children[1]);
+
+      // Right-side vertical nav
+      const jerotaNav = document.createElement("div");
+      jerotaNav.id = "jerota-nav";
+      jerotaNav.innerHTML = `
+        <button id="nav-toggle">☰</button>
+        <div id="nav-links">
+          <a href="#aphrodite">Aphrodite</a>
+          <a href="https://www.amazon.com/author/jerota" target="_blank" rel="noopener noreferrer">Amazon</a>
+          <a href="#about">About</a>
+        </div>
+      `;
+      document.body.appendChild(jerotaNav);
+
+      document.getElementById("nav-toggle").addEventListener("click", () => {
+        document.getElementById("jerota-nav").classList.toggle("open");
+      });
+
+      // Footer
+      const jerotaFooter = document.createElement("div");
+      jerotaFooter.id = "jerota-footer";
+      jerotaFooter.innerHTML = `
+        <div>&copy; ${new Date().getFullYear()} Jerota.com · Lust and Literature</div>
+        <div style="margin-top: 0.5rem;">
+          <a href="http://eepurl.com/jaaJ4M" target="_blank">Join Newsletter</a> |
+          <a href="https://x.com/jerotaofficial" target="_blank">Twitter</a> |
+          <a href="mailto:you@jerota.com">Contact</a>
+        </div>
+      `;
+      document.body.appendChild(jerotaFooter);
+    });
+  </script>
 </body>
 </html>
