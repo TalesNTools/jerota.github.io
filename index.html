@@ -8,6 +8,20 @@
   <link rel="stylesheet" href="assets/css/style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap" rel="stylesheet" />
 </head>
+  <div id="jerota-nav">
+  <button id="nav-toggle">☰</button>
+  <div id="nav-links">
+    <a href="#aphrodite">Aphrodite</a>
+    <a href="https://www.amazon.com/author/jerota" target="_blank" rel="noopener noreferrer">Amazon</a>
+    <a href="#about">About</a>
+  </div>
+</div>
+
+<script>
+  document.getElementById("nav-toggle").addEventListener("click", function () {
+    document.getElementById("jerota-nav").classList.toggle("open");
+  });
+</script>
 <body>
 
   <header id="jerota-header">
