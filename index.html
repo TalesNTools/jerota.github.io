@@ -8,6 +8,52 @@
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
+
+  <main style="max-width: 1200px; margin: 0 auto; padding: 2rem; color: #FFD700; font-family: 'Courier New', monospace;">
+    <h1 style="font-size: 3rem; font-weight: bold; text-align: center;">MARKED BY APHRODITE</h1>
+
+    <section style="display: flex; flex-wrap: wrap; justify-content: center; margin-top: 2rem;">
+      <div style="flex: 1; min-width: 300px; display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+        <img src="https://example.com/book1.png" alt="Desire Book" style="max-height: 300px;" />
+        <img src="https://example.com/book2.png" alt="Control Book" style="max-height: 300px;" />
+        <img src="https://example.com/book3.png" alt="Tease Book" style="max-height: 300px;" />
+        <img src="https://example.com/book4.png" alt="Endure Book" style="max-height: 300px;" />
+      </div>
+
+      <div style="flex: 1; min-width: 300px; padding: 2rem;">
+        <h2 style="border-top: 2px solid #FFD700; border-bottom: 2px solid #FFD700; padding: 0.5rem 0;">COLLECTION 1</h2>
+        <p><em><a href="#" style="color: #FFD700; text-decoration: underline;">Marked by Aphrodite</a></em>: Stories 1–4</p>
+        <p>
+          The <em>Marked by Aphrodite</em> series is perfect for readers who crave
+          <strong>myth-inspired romance</strong>, <strong>supernatural seduction</strong>, and vivid,
+          <strong>erotic fantasy settings</strong>, where every encounter is steeped in <strong>magic</strong>,
+          <strong>mystery</strong>, and <strong>primal heat</strong>.
+        </p>
+        <p>
+          Let the elemental spirits guide you through a world where nature’s power meets the fiery depths of discovery.
+        </p>
+        <p>Check out the full series here: <a href="https://amazon.com/author/jerota" target="_blank" style="color: #FFD700;">Amazon</a></p>
+      </div>
+    </section>
+
+    <section style="margin-top: 3rem;">
+      <details>
+        <summary style="font-size: 1.5rem; font-weight: bold; cursor: pointer; border-bottom: 1px solid #FFD700; padding: 0.5rem 0;">DESIRE: STORY 1</summary>
+        <p style="padding: 1rem 0;">Short blurb or excerpt here…</p>
+      </details>
+
+      <details>
+        <summary style="font-size: 1.5rem; font-weight: bold; cursor: pointer; border-bottom: 1px solid #FFD700; padding: 0.5rem 0;">CONTROL: STORY 2</summary>
+        <p style="padding: 1rem 0;">Short blurb or excerpt here…</p>
+      </details>
+
+      <details>
+        <summary style="font-size: 1.5rem; font-weight: bold; cursor: pointer; border-bottom: 1px solid #FFD700; padding: 0.5rem 0;">TEASE: STORY 3</summary>
+        <p style="padding: 1rem 0;">Short blurb or excerpt here…</p>
+      </details>
+    </section>
+  </main>
+
   <script>
     const faviconURL = "https://images.squarespace-cdn.com/content/650f8a488e019463b657b726/adc91a27-03ed-4d53-bea7-b04d2d33557b/original.png?content-type=image%2Fpng";
 
@@ -28,7 +74,6 @@
     window.addEventListener("load", function () {
       document.title = "Jerota – Lust and Literature";
 
-      // Newsletter bar
       const newsletterBar = document.createElement("div");
       newsletterBar.id = "jerota-newsletter";
       newsletterBar.innerHTML = `
@@ -49,7 +94,6 @@
         }
       });
 
-      // Header
       const jerotaHeader = document.createElement("div");
       jerotaHeader.id = "jerota-header";
       jerotaHeader.innerHTML = `
@@ -67,7 +111,6 @@
       `;
       document.body.insertBefore(jerotaHeader, document.body.children[1]);
 
-      // Right-side vertical nav
       const jerotaNav = document.createElement("div");
       jerotaNav.id = "jerota-nav";
       jerotaNav.innerHTML = `
@@ -84,7 +127,6 @@
         document.getElementById("jerota-nav").classList.toggle("open");
       });
 
-      // Footer
       const jerotaFooter = document.createElement("div");
       jerotaFooter.id = "jerota-footer";
       jerotaFooter.innerHTML = `
