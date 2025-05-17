@@ -103,6 +103,59 @@ a {
   background-color: #e6c200;
 }
 
+#jerota-nav {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.7);
+  border-left: 2px solid #cc3366;
+  border-radius: 8px 0 0 8px;
+  padding: 0.3rem;
+  font-family: 'Courier Prime', monospace;
+  z-index: 998;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  max-width: fit-content;
+}
+
+#jerota-nav #nav-toggle {
+  background-color: gold;
+  color: black;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  padding: 0.4rem 0.6rem;
+  font-size: 1rem;
+  border-radius: 4px;
+}
+
+#jerota-nav #nav-links {
+  display: none;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-top: 0.6rem;
+  background-color: rgba(0, 0, 0, 0.9);
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px 0 0 8px;
+  text-align: right;
+}
+
+#jerota-nav.open #nav-links {
+  display: flex;
+}
+
+#jerota-nav a {
+  color: gold;
+  text-decoration: none;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+#jerota-nav a:hover {
+  text-decoration: underline;
+}
 
 #jerota-footer {
   background: #000;
